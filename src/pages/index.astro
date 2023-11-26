@@ -1,23 +1,16 @@
 ---
-import Counter from '../components/Counter';
 import Layout from '../layouts/Layout.astro';
-const someProps = {
-  count: 0,
-};
 ---
 
 <Layout title="Astro Blog Landing Page">
   <main>
-    <h1>Astro<span class="text-gradient">Blog 🚀</span></h1>
-    <p class="instructions">
-      To get started, open the directory <code>src/pages</code> in your project.<br
-      />
-      <strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message
-      above.
-    </p>
-    <Counter {...someProps} client:visible>
-      <p>x</p>
-    </Counter>
+    <h1>Astro<span class="text-gradient">Blog🚀</span></h1>
+    <div class="description">
+      Embark on a celestial journey with Astro Blog, where the cosmos comes
+      alive through the art of words. Explore the wonders of the universe, from
+      the mesmerizing dance of planets to the enigmatic beauty of distant
+      galaxies
+    </div>
   </main>
 </Layout>
 
@@ -25,26 +18,16 @@ const someProps = {
   main {
     margin: auto;
     padding: 1rem;
-    width: 800px;
-    max-width: calc(100% - 2rem);
+    width: min(100% - 2rem, 800px);
     font-size: 20px;
     line-height: 1.6;
   }
-  .astro-a {
-    position: absolute;
-    top: -32px;
-    left: 50%;
-    transform: translatex(-50%);
-    width: 220px;
-    height: auto;
-    z-index: -1;
-  }
   h1 {
-    font-size: 4rem;
+    font-size: calc(2rem + 3vw);
     font-weight: 700;
     line-height: 1;
     text-align: center;
-    margin-bottom: 1em;
+    margin-block: 1rem 0.8em;
   }
   .text-gradient {
     background-image: var(--accent-gradient);
@@ -53,7 +36,7 @@ const someProps = {
     background-size: 400%;
     background-position: 0%;
   }
-  .instructions {
+  .description {
     margin-bottom: 2rem;
     border: 1px solid rgba(var(--accent-light), 25%);
     background: linear-gradient(
@@ -62,8 +45,9 @@ const someProps = {
     );
     padding: 1.5rem;
     border-radius: 8px;
+    text-align: justify;
   }
-  .instructions code {
+  .description code {
     font-size: 0.8em;
     font-weight: bold;
     background: rgba(var(--accent-light), 12%);
@@ -71,7 +55,7 @@ const someProps = {
     border-radius: 4px;
     padding: 0.3em 0.4em;
   }
-  .instructions strong {
+  .description strong {
     color: rgb(var(--accent-light));
   }
 </style>
