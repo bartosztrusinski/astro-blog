@@ -1,5 +1,7 @@
 ---
+import { getCollection } from 'astro:content';
 import Layout from '../layouts/Layout.astro';
+const blogEntries = await getCollection('blog');
 ---
 
 <Layout title="Astro Blog Landing Page">
@@ -11,6 +13,19 @@ import Layout from '../layouts/Layout.astro';
       the mesmerizing dance of planets to the enigmatic beauty of distant
       galaxies
     </div>
+
+    <ul>
+      {
+        blogEntries.map((blogPost) => (
+          <li>
+            <a href={`/posts/${blogPost.slug}`}>{blogPost.data.title}</a>
+            <time datetime={blogPost.data.date.toISOString()}>
+              {blogPost.data.date.toDateString()}
+            </time>
+          </li>
+        ))
+      }
+    </ul>
   </main>
 </Layout>
 
