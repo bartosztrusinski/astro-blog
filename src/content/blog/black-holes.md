@@ -4,11 +4,16 @@ date: 2023-11-26
 image: https://science.nasa.gov/_ipx/w_2048&f_webp/https://smd-cms.nasa.gov/wp-content/uploads/2023/09/blackhole_1600.jpg%3Fw=1600
 ---
 
-# Beyond the Cosmic Veil: Unraveling the Mysteries of Black Holes
-
 _In the vast tapestry of the cosmos, black holes stand as enigmatic entities, captivating the imaginations of astronomers and space enthusiasts alike. These cosmic wonders, shrouded in mystery, defy our conventional understanding of space and time. Join us on this celestial journey as we unravel the basic knowledge about black holes, exploring the science behind these gravitational behemoths._
 
 **Black holes** are born from the remnants of massive stars that have exhausted their nuclear fuel. When such a star reaches the end of its life cycle, it undergoes a supernova explosion, and what remains can collapse under its own gravity to form a black hole. The gravitational pull becomes so intense that not even light can escape, rendering these celestial bodies invisible to the naked eye.
+
+<figure class="image">
+  <img src="https://science.nasa.gov/_ipx/w_2048&f_webp/https://smd-cms.nasa.gov/wp-content/uploads/2023/09/Illustration_of_black_hole.jpeg%3Fw=1728" alt="This artist's impression depicts a rapidly spinning supermassive black hole surrounded by an accretion disc. The black hole is labeled, showing the anatomy of this fascinating object" />
+  <figcaption>
+    This artist's impression depicts a rapidly spinning supermassive black hole surrounded by an accretion disc. The black hole is labeled, showing the anatomy of this fascinating object
+  </figcaption>
+</figure>
 
 Understanding the anatomy of a black hole involves exploring key features such as the event horizon, singularity, and ergosphere. The event horizon is the boundary beyond which nothing can escape the gravitational clutches of the black hole. At the heart of a black hole lies the singularity—a point of infinite density where our known laws of physics break down. The ergosphere is a region just outside the event horizon where the black hole's rotation drags spacetime along with it.
 
