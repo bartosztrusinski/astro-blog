@@ -14,14 +14,16 @@ const blogEntries = await getCollection('blog');
       galaxies
     </div>
 
-    <ul>
+    <ul class="list">
       {
         blogEntries.map((blogPost) => (
-          <li>
-            <a href={`/posts/${blogPost.slug}`}>{blogPost.data.title}</a>
-            <time datetime={blogPost.data.date.toISOString()}>
-              {blogPost.data.date.toDateString()}
-            </time>
+          <li class="post">
+            <a href={`/posts/${blogPost.slug}`}>
+              <h2 class="text-gradient">{blogPost.data.title}</h2>
+              <time datetime={blogPost.data.date.toISOString()}>
+                {blogPost.data.date.toDateString()}
+              </time>
+            </a>
           </li>
         ))
       }
@@ -33,7 +35,7 @@ const blogEntries = await getCollection('blog');
   main {
     margin: auto;
     padding: 1rem;
-    width: min(100% - 2rem, 800px);
+    width: min(100% - 2rem, 60rem);
     font-size: 20px;
     line-height: 1.6;
   }
@@ -72,5 +74,34 @@ const blogEntries = await getCollection('blog');
   }
   .description strong {
     color: rgb(var(--accent-light));
+  }
+  .list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    width: min(38.4rem, 100%);
+    margin-inline: auto;
+  }
+  .post {
+    display: flex;
+    border: 1px solid rgba(var(--accent-light), 25%);
+    border-radius: 0.5rem;
+    transition: all 120ms ease-in-out;
+  }
+  .post a {
+    text-decoration: none;
+    flex-basis: 100%;
+    color: inherit;
+    line-height: 1.3;
+    padding: 0.8rem 1.6rem 1.6rem 1.6rem;
+  }
+  .post:hover {
+    background: rgba(var(--accent-light), 6%);
+  }
+  .post time {
+    font-weight: 300;
+    font-size: 0.8em;
   }
 </style>
