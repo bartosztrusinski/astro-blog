@@ -10,7 +10,7 @@ _In the vast tapestry of the cosmos, black holes stand as enigmatic entities, ca
 
 <figure class="image">
   <img src="https://science.nasa.gov/_ipx/w_2048&f_webp/https://smd-cms.nasa.gov/wp-content/uploads/2023/09/Illustration_of_black_hole.jpeg%3Fw=1728" alt="This artist's impression depicts a rapidly spinning supermassive black hole surrounded by an accretion disc. The black hole is labeled, showing the anatomy of this fascinating object" />
-  <figcaption>
+  <figcaption class="caption">
     This artist's impression depicts a rapidly spinning supermassive black hole surrounded by an accretion disc. The black hole is labeled, showing the anatomy of this fascinating object
   </figcaption>
 </figure>
@@ -24,3 +24,19 @@ The intense gravitational fields around black holes give rise to fascinating phe
 While black holes themselves are invisible, their presence can be inferred through the effects they have on nearby matter. X-ray emissions from accretion disks—a swirling mass of gas and dust spiraling into a black hole—provide valuable clues. Gravitational waves, ripples in spacetime caused by accelerating masses, also offer a new tool for detecting black hole mergers and other cosmic events.
 
 Black holes, with their mysterious nature and immense gravitational influence, continue to be a source of fascination and intrigue in the realm of astrophysics. As our understanding of these cosmic enigmas evolves, so too does our appreciation for the profound impact they have on the fabric of the universe. The exploration of black holes is an ongoing odyssey, inviting us to peer into the deepest recesses of space and time, where the laws of physics as we know them are pushed to their limits.
+
+<style>
+  .image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding-inline: 2rem;
+  }
+  .caption {
+    /* text-align: justify; */
+    font-size: 0.8em;
+    font-weight: 300;
+    /* opacity: 0.8; */
+    color: hsl(274, 16%, 74%);
+  }
+</style>
