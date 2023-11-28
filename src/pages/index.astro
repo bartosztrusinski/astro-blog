@@ -86,7 +86,6 @@ const blogEntries = await getCollection('blog');
   }
   .post {
     display: flex;
-    border: 1px solid rgba(var(--accent-light), 25%);
     border-radius: 0.5rem;
     transition: all 120ms ease-in-out;
   }
@@ -99,6 +98,7 @@ const blogEntries = await getCollection('blog');
   }
   .post:hover {
     background: rgba(var(--accent-light), 6%);
+    box-shadow: 0 0 3px 1px rgba(var(--accent-light), 12%);
   }
   .post time {
     font-weight: 300;
