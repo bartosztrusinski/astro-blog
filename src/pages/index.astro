@@ -19,10 +19,20 @@ const blogEntries = await getCollection('blog');
         blogEntries.map((blogPost) => (
           <li class="post">
             <a href={`/posts/${blogPost.slug}`}>
-              <h2 class="text-gradient">{blogPost.data.title}</h2>
-              <time datetime={blogPost.data.date.toISOString()}>
-                {blogPost.data.date.toDateString()}
-              </time>
+              <img
+                src={blogPost.data.image}
+                alt={blogPost.data.title}
+                loading="lazy"
+              />
+              <div class="body">
+                <h2 class="text-gradient">{blogPost.data.title}</h2>
+                <time
+                  class="text-muted"
+                  datetime={blogPost.data.date.toISOString()}
+                >
+                  {blogPost.data.date.toDateString()}
+                </time>
+              </div>
             </a>
           </li>
         ))
@@ -39,20 +49,16 @@ const blogEntries = await getCollection('blog');
     font-size: 20px;
     line-height: 1.6;
   }
+
   h1 {
     font-size: calc(2rem + 3vw);
     font-weight: 700;
     line-height: 1;
     text-align: center;
     margin-block: 1rem 0.8em;
+    text-wrap: balance;
   }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
+
   .description {
     margin-bottom: 2rem;
     border: 1px solid rgba(var(--accent-light), 25%);
@@ -64,6 +70,7 @@ const blogEntries = await getCollection('blog');
     border-radius: 8px;
     text-align: justify;
   }
+
   .description code {
     font-size: 0.8em;
     font-weight: bold;
@@ -72,9 +79,11 @@ const blogEntries = await getCollection('blog');
     border-radius: 4px;
     padding: 0.3em 0.4em;
   }
+
   .description strong {
     color: rgb(var(--accent-light));
   }
+
   .list {
     list-style: none;
     padding: 0;
@@ -84,24 +93,32 @@ const blogEntries = await getCollection('blog');
     width: min(38.4rem, 100%);
     margin-inline: auto;
   }
+
   .post {
     display: flex;
-    border-radius: 0.5rem;
+    border-radius: 0.3rem;
     transition: all 120ms ease-in-out;
   }
+
   .post a {
-    text-decoration: none;
     flex-basis: 100%;
-    color: inherit;
+    text-decoration: none;
     line-height: 1.3;
-    padding: 0.8rem 1.6rem 1.6rem 1.6rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0.8rem;
   }
+
+  .post img {
+    height: 6.5rem;
+    object-fit: cover;
+    border-radius: 0.4rem;
+  }
+
   .post:hover {
     background: rgba(var(--accent-light), 6%);
     box-shadow: 0 0 3px 1px rgba(var(--accent-light), 12%);
-  }
-  .post time {
-    font-weight: 300;
-    font-size: 0.8em;
   }
 </style>
