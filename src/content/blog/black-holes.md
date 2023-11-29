@@ -4,13 +4,13 @@ date: 2023-11-26
 image: https://science.nasa.gov/_ipx/w_2048&f_webp/https://smd-cms.nasa.gov/wp-content/uploads/2023/09/blackhole_1600.jpg%3Fw=1600
 ---
 
-_In the vast tapestry of the cosmos, black holes stand as enigmatic entities, captivating the imaginations of astronomers and space enthusiasts alike. These cosmic wonders, shrouded in mystery, defy our conventional understanding of space and time. Join us on this celestial journey as we unravel the basic knowledge about black holes, exploring the science behind these gravitational behemoths._
+In the vast tapestry of the cosmos, black holes stand as enigmatic entities, captivating the imaginations of astronomers and space enthusiasts alike. These cosmic wonders, shrouded in mystery, defy our conventional understanding of space and time. Join us on this celestial journey as we unravel the basic knowledge about black holes, exploring the science behind these gravitational behemoths.
 
 **Black holes** are born from the remnants of massive stars that have exhausted their nuclear fuel. When such a star reaches the end of its life cycle, it undergoes a supernova explosion, and what remains can collapse under its own gravity to form a black hole. The gravitational pull becomes so intense that not even light can escape, rendering these celestial bodies invisible to the naked eye.
 
 <figure class="image">
   <img src="https://science.nasa.gov/_ipx/w_2048&f_webp/https://smd-cms.nasa.gov/wp-content/uploads/2023/09/Illustration_of_black_hole.jpeg%3Fw=1728" alt="This artist's impression depicts a rapidly spinning supermassive black hole surrounded by an accretion disc. The black hole is labeled, showing the anatomy of this fascinating object" />
-  <figcaption class="caption">
+  <figcaption class="text-muted">
     This artist's impression depicts a rapidly spinning supermassive black hole surrounded by an accretion disc. The black hole is labeled, showing the anatomy of this fascinating object
   </figcaption>
 </figure>
@@ -31,12 +31,5 @@ Black holes, with their mysterious nature and immense gravitational influence, c
     height: auto;
     object-fit: contain;
     padding-inline: 2rem;
-  }
-  .caption {
-    /* text-align: justify; */
-    font-size: 0.8em;
-    font-weight: 300;
-    /* opacity: 0.8; */
-    color: hsl(274, 16%, 74%);
   }
 </style>

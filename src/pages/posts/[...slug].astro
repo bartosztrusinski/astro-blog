@@ -18,7 +18,7 @@ const { Content } = await entry.render();
   <main>
     <section class="heading">
       <h1 class="text-gradient">{entry.data.title}</h1>
-      <time datetime={entry.data.date.toISOString()}
+      <time class="text-muted" datetime={entry.data.date.toISOString()}
         >{entry.data.date.toDateString()}</time
       >
     </section>
@@ -37,6 +37,7 @@ const { Content } = await entry.render();
     line-height: 1.6;
     margin-bottom: 4rem;
   }
+
   .heading {
     margin-bottom: 2rem;
   }
@@ -46,17 +47,7 @@ const { Content } = await entry.render();
     line-height: 1;
     text-wrap: balance;
   }
-  time {
-    font-weight: 300;
-    font-size: 0.8em;
-  }
-  .text-gradient {
-    background-image: var(--accent-gradient);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-size: 400%;
-    background-position: 0%;
-  }
+
   .content {
     display: flex;
     flex-direction: column;
