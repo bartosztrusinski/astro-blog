@@ -12,10 +12,20 @@
   --dark: 29, 29, 32;
 }
 
-html {
+[data-theme='light'] {
+  --color-bg: rgb(var(--light));
+  --color-text: rgb(var(--dark));
+}
+
+[data-theme='dark'] {
+  --color-bg: rgb(var(--dark));
+  --color-text: rgb(var(--light));
+}
+
+body {
   font-family: system-ui, sans-serif;
-  background: rgb(var(--dark));
-  color: rgb(var(--light));
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 code {
