@@ -1,10 +1,13 @@
 ---
 import { getCollection } from 'astro:content';
+import Header from '../components/Header';
 import Layout from '../layouts/Layout.astro';
+
 const blogEntries = await getCollection('blog');
 ---
 
 <Layout title="AstroBlog">
+  <Header client:only />
   <main>
     <h1>Astro<span class="text-gradient">Blog🚀</span></h1>
     <div class="description">
@@ -19,11 +22,13 @@ const blogEntries = await getCollection('blog');
         blogEntries.map((blogPost) => (
           <li class="post">
             <a href={`/posts/${blogPost.slug}`}>
-              <img
-                src={blogPost.data.image}
-                alt={blogPost.data.title}
-                loading="lazy"
-              />
+              {blogPost.data.image && (
+                <img
+                  src={blogPost.data.image}
+                  alt={blogPost.data.title}
+                  loading="lazy"
+                />
+              )}
               <div class="body">
                 <h2 class="text-gradient">{blogPost.data.title}</h2>
                 <time
