@@ -1,0 +1,28 @@
+.toggle {
+  appearance: none;
+  width: 3rem;
+  height: 1.5rem;
+  background: #aaa;
+  border-radius: 1rem;
+  cursor: pointer;
+}
+
+.toggle:checked {
+  background: #666;
+}
+
+.toggle::after {
+  content: '';
+  display: block;
+  width: 1.2rem;
+  margin-top: 0.15rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: #fff;
+  transform: translateX(0.15rem);
+  transition: transform 180ms ease-out;
+}
+
+.toggle:checked::after {
+  transform: translateX(1.65rem);
+}
