@@ -1,12 +1,12 @@
 import useDarkMode from '../../hooks/useDarkMode';
 import Toggle from '../Toggle';
-import './index.css';
+import styles from './index.module.css';
 
 const Header = () => {
   const [isDarkMode, toggleDarkMode] = useDarkMode();
 
   return (
-    <header className="header">
+    <header className={styles.header}>
       <h1>
         Astro<span className="text-gradient">Blog🚀</span>
       </h1>
