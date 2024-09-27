@@ -2,13 +2,13 @@
   appearance: none;
   width: 3rem;
   height: 1.5rem;
-  background: #aaa;
+  background-color: #aaa;
   border-radius: 1rem;
   cursor: pointer;
 }
 
 .toggle:checked {
-  background: #666;
+  background-color: #666;
 }
 
 .toggle::after {
@@ -18,11 +18,23 @@
   margin-top: 0.15rem;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: #fff;
+  background-color: #fff;
   transform: translateX(0.15rem);
   transition: transform 180ms ease-out;
 }
 
 .toggle:checked::after {
   transform: translateX(1.65rem);
+}
+
+.visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
 }

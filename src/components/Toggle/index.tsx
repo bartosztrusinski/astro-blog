@@ -1,16 +1,21 @@
-import './index.css';
+import styles from './index.module.css';
 
 interface ToggleProps {
   isChecked?: boolean;
+  label: string;
   onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Toggle = ({ isChecked = false, onChange: handleChange }: ToggleProps) => {
+const Toggle = ({
+  isChecked = false,
+  onChange: handleChange,
+  label,
+}: ToggleProps) => {
   return (
     <>
-      {/* TODO: add label */}
+      <label className={styles.visuallyHidden}>{label}</label>
       <input
-        className="toggle"
+        className={styles.toggle}
         type="checkbox"
         checked={isChecked}
         onChange={handleChange}

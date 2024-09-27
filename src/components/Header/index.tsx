@@ -10,7 +10,11 @@ const Header = () => {
       <h1>
         Astro<span className="text-gradient">Blog🚀</span>
       </h1>
-      <Toggle isChecked={isDarkMode} onChange={toggleDarkMode} />
+      <Toggle
+        isChecked={isDarkMode}
+        onChange={toggleDarkMode}
+        label={`Enable ${isDarkMode ? 'light' : 'dark'} mode`}
+      />
     </header>
   );
 };
