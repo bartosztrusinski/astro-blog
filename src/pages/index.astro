@@ -56,7 +56,7 @@ const blogEntries = await getCollection('blog');
   }
 
   h1 {
-    font-size: calc(2rem + 3vw);
+    font-size: calc(2rem + 2.6vw);
     font-weight: bold;
     line-height: 1;
     text-align: center;
@@ -64,52 +64,70 @@ const blogEntries = await getCollection('blog');
     text-wrap: balance;
   }
 
+  h2 {
+    font-size: calc(1.5rem + 0.6vw);
+  }
+
   p {
-    margin-bottom: 2rem;
     background-image: var(--gradient);
     color: rgba(var(--light), 0.9);
-    font-weight: 500;
-    font-size: 1.1rem;
-    padding: 1.5rem;
+    font-size: calc(0.9rem + 0.22vw);
+    margin-bottom: 2rem;
+    padding: 1.2rem 2rem;
     border-radius: 0.4rem;
     text-align: justify;
+    line-height: 1.8;
   }
 
   ul {
-    list-style: none;
-    padding: 0;
+    list-style-type: none;
     display: flex;
     gap: 1rem;
     flex-direction: column;
-    width: min(38.4rem, 100%);
-    margin-inline: auto;
+    padding: 0;
   }
 
   .post {
-    display: flex;
     border-radius: 0.3rem;
     transition: all 120ms ease-in-out;
 
     & a {
-      flex-basis: 100%;
-      text-decoration: none;
-      line-height: 1.3;
-      padding: 1rem;
       display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      gap: 0.8rem;
+      text-decoration: none;
+      padding: 0.6rem;
+      gap: 1rem;
     }
 
     & img {
-      height: 6.5rem;
+      max-height: 10rem;
       object-fit: cover;
       border-radius: 0.4rem;
     }
 
+    & div {
+      display: flex;
+      flex-direction: column;
+      place-content: center;
+      gap: 0.5rem;
+      line-height: 1.2;
+      padding-bottom: 1.2rem;
+      text-wrap: balance;
+    }
+
     &:hover {
-      background-color: rgba(var(--accent), 6%);
-      box-shadow: 0 0 3px 1px rgba(var(--accent), 20%);
+      background-color: rgba(var(--accent), 0.06);
+      box-shadow: 0 0 3px 1px rgba(var(--accent), 0.2);
+    }
+
+    @media (max-width: 768px) {
+      & a {
+        flex-direction: column;
+        gap: 0.4rem;
+      }
+
+      & img {
+        max-height: 8rem;
+      }
     }
   }
 </style>
