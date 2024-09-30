@@ -14,15 +14,16 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<Layout title={`${entry.data.title} - AstroBlog`}>
+<Layout title={`${entry.data.title} | AstroBlog`}>
   <main>
-    <section class="heading">
+    <header>
       <h1 class="text-gradient">{entry.data.title}</h1>
       <time class="text-muted" datetime={entry.data.date.toISOString()}
-        >{entry.data.date.toDateString()}</time
-      >
-    </section>
-    <section class="content">
+        >{entry.data.date.toDateString()}
+      </time>
+    </header>
+
+    <section>
       <Content />
     </section>
   </main>
@@ -38,9 +39,10 @@ const { Content } = await entry.render();
     margin-bottom: 4rem;
   }
 
-  .heading {
+  header {
     margin-bottom: 2rem;
   }
+
   h1 {
     font-size: calc(1.5rem + 3vw);
     font-weight: 700;
@@ -48,7 +50,7 @@ const { Content } = await entry.render();
     text-wrap: balance;
   }
 
-  .content {
+  section {
     display: flex;
     flex-direction: column;
     gap: 1.6rem;

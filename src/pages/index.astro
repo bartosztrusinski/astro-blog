@@ -9,15 +9,15 @@ const blogEntries = await getCollection('blog');
 <Layout title="AstroBlog">
   <Header client:only />
   <main>
-    <h1>Astro<span class="text-gradient">Blog🚀</span></h1>
-    <div class="description">
+    <h1>Welcome to <br /><span class="text-gradient">AstroBlog</span>🚀</h1>
+    <p>
       Embark on a celestial journey with Astro Blog, where the cosmos comes
       alive through the art of words. Explore the wonders of the universe, from
       the mesmerizing dance of planets to the enigmatic beauty of distant
       galaxies
-    </div>
+    </p>
 
-    <ul class="list">
+    <ul>
       {
         blogEntries.map((blogPost) => (
           <li class="post">
@@ -29,7 +29,7 @@ const blogEntries = await getCollection('blog');
                   loading="lazy"
                 />
               )}
-              <div class="body">
+              <div>
                 <h2 class="text-gradient">{blogPost.data.title}</h2>
                 <time
                   class="text-muted"
@@ -50,46 +50,32 @@ const blogEntries = await getCollection('blog');
   main {
     margin: auto;
     padding: 1rem;
-    width: min(100% - 2rem, 60rem);
+    width: min(100% - 2rem, 80ch);
     font-size: 20px;
     line-height: 1.6;
   }
 
   h1 {
     font-size: calc(2rem + 3vw);
-    font-weight: 700;
+    font-weight: bold;
     line-height: 1;
     text-align: center;
     margin-block: 1rem 0.8em;
     text-wrap: balance;
   }
 
-  .description {
+  p {
     margin-bottom: 2rem;
-    border: 1px solid rgba(var(--accent-light), 25%);
-    background: linear-gradient(
-      rgba(var(--accent-dark), 66%),
-      rgba(var(--accent-dark), 33%)
-    );
+    background-image: var(--gradient);
+    color: rgba(var(--light), 0.9);
+    font-weight: 500;
+    font-size: 1.1rem;
     padding: 1.5rem;
-    border-radius: 8px;
+    border-radius: 0.4rem;
     text-align: justify;
   }
 
-  .description code {
-    font-size: 0.8em;
-    font-weight: bold;
-    background: rgba(var(--accent-light), 12%);
-    color: rgb(var(--accent-light));
-    border-radius: 4px;
-    padding: 0.3em 0.4em;
-  }
-
-  .description strong {
-    color: rgb(var(--accent-light));
-  }
-
-  .list {
+  ul {
     list-style: none;
     padding: 0;
     display: flex;
@@ -103,27 +89,27 @@ const blogEntries = await getCollection('blog');
     display: flex;
     border-radius: 0.3rem;
     transition: all 120ms ease-in-out;
-  }
 
-  .post a {
-    flex-basis: 100%;
-    text-decoration: none;
-    line-height: 1.3;
-    padding: 1rem;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    gap: 0.8rem;
-  }
+    & a {
+      flex-basis: 100%;
+      text-decoration: none;
+      line-height: 1.3;
+      padding: 1rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      gap: 0.8rem;
+    }
 
-  .post img {
-    height: 6.5rem;
-    object-fit: cover;
-    border-radius: 0.4rem;
-  }
+    & img {
+      height: 6.5rem;
+      object-fit: cover;
+      border-radius: 0.4rem;
+    }
 
-  .post:hover {
-    background: rgba(var(--accent-light), 6%);
-    box-shadow: 0 0 3px 1px rgba(var(--accent-light), 12%);
+    &:hover {
+      background-color: rgba(var(--accent), 6%);
+      box-shadow: 0 0 3px 1px rgba(var(--accent), 20%);
+    }
   }
 </style>
