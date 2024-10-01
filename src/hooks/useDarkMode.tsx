@@ -2,13 +2,14 @@ import { useEffect } from 'react';
 import useLocalStorage from './useLocalStorage';
 import useMediaQuery from './useMediaQuery';
 
-type UseDarkMode = () => [isDarkMode: boolean, toggleDarkMode: () => void];
-
-const useDarkMode: UseDarkMode = () => {
-  const defaultDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+export default function useDarkMode(): [
+  isDarkMode: boolean,
+  toggleDarkMode: () => void,
+] {
+  const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
   const [isDarkMode, setIsDarkMode] = useLocalStorage(
     'ab-dark-mode',
-    defaultDarkMode,
+    prefersDarkMode,
   );
 
   useEffect(() => {
@@ -20,6 +21,4 @@ const useDarkMode: UseDarkMode = () => {
   };
 
   return [isDarkMode, toggleDarkMode];
-};
-
-export default useDarkMode;
+}
