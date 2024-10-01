@@ -16,6 +16,11 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <script is:inline>
+      const isDarkMode = localStorage.getItem('ab-dark-mode') === 'true';
+      const theme = isDarkMode ? 'dark' : 'light';
+      document.documentElement.dataset.theme = theme;
+    </script>
   </head>
   <body>
     <slot />
