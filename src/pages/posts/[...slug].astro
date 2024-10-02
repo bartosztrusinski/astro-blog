@@ -27,14 +27,22 @@ const { Content } = await entry.render();
       <Content />
     </section>
   </main>
+  <a href="/" aria-label="Go Back">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M9 15 3 9m0 0 6-6M3 9h12a6 6 0 0 1 0 12h-3"></path>
+    </svg>
+  </a>
 </Layout>
 
 <style>
   main {
     margin-inline: auto;
     padding: 1rem;
-    width: min(100% - 2rem, 44rem);
-    font-size: 20px;
+    width: min(100% - 2rem, 70ch);
+    font-size: 1.2rem;
     line-height: 1.6;
     margin-bottom: 4rem;
   }
@@ -55,5 +63,28 @@ const { Content } = await entry.render();
     flex-direction: column;
     gap: 1.6rem;
     text-align: justify;
+  }
+
+  a {
+    position: fixed;
+    top: 2rem;
+    left: max(50% - 26rem, 2rem);
+    background-image: var(--gradient);
+    color: rgba(var(--light), 0.9);
+    text-decoration: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.4rem;
+
+    @media (max-width: 880px) {
+      bottom: 1rem;
+      top: unset;
+    }
+  }
+
+  svg {
+    width: 1.4rem;
+    stroke: currentColor;
+    stroke-width: 2;
+    fill: none;
   }
 </style>
