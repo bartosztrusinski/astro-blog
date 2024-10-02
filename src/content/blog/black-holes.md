@@ -9,9 +9,9 @@ In the vast tapestry of the cosmos, black holes stand as enigmatic entities, cap
 **Black holes** are born from the remnants of massive stars that have exhausted their nuclear fuel. When such a star reaches the end of its life cycle, it undergoes a supernova explosion, and what remains can collapse under its own gravity to form a black hole. The gravitational pull becomes so intense that not even light can escape, rendering these celestial bodies invisible to the naked eye.
 
 <figure class="image">
-  <img src="https://science.nasa.gov/_ipx/w_2048&f_webp/https://smd-cms.nasa.gov/wp-content/uploads/2023/09/Illustration_of_black_hole.jpeg%3Fw=1728" alt="This artist's impression depicts a rapidly spinning supermassive black hole surrounded by an accretion disc. The black hole is labeled, showing the anatomy of this fascinating object" />
+  <img loading="lazy" src="https://science.nasa.gov/_ipx/w_2048&f_webp/https://smd-cms.nasa.gov/wp-content/uploads/2023/09/Illustration_of_black_hole.jpeg%3Fw=1728" alt="Rapidly spinning supermassive black hole surrounded by an accretion disc" />
   <figcaption class="text-muted">
-    This artist's impression depicts a rapidly spinning supermassive black hole surrounded by an accretion disc. The black hole is labeled, showing the anatomy of this fascinating object
+    Rapidly spinning supermassive black hole surrounded by an accretion disc.
   </figcaption>
 </figure>
 
@@ -26,7 +26,7 @@ While black holes themselves are invisible, their presence can be inferred throu
 Black holes, with their mysterious nature and immense gravitational influence, continue to be a source of fascination and intrigue in the realm of astrophysics. As our understanding of these cosmic enigmas evolves, so too does our appreciation for the profound impact they have on the fabric of the universe. The exploration of black holes is an ongoing odyssey, inviting us to peer into the deepest recesses of space and time, where the laws of physics as we know them are pushed to their limits.
 
 <style>
-  .image {
+  figure {
     width: 100%;
     height: auto;
     object-fit: contain;
