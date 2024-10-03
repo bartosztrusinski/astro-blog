@@ -8,22 +8,34 @@
   --secondary: 18, 194, 133;
   --secondary-dark: 20, 111, 81;
 
-  --color-bg-rgb: var(--light);
   --color-bg: rgb(var(--color-bg-rgb));
-
-  --color-text-rgb: var(--dark);
   --color-text: rgb(var(--color-text-rgb));
 
-  --gradient-start-rgb: var(--accent);
-  --gradient-end-rgb: var(--secondary);
   --gradient: linear-gradient(
     45deg,
     rgb(var(--gradient-start-rgb)) 30%,
     rgb(var(--gradient-end-rgb))
   );
+
+  --theme-transition: 0.5s ease;
 }
 
-[data-theme='dark'] {
+/* Light theme */
+html,
+html[data-theme='light'] {
+  color-scheme: light;
+
+  --color-text-rgb: var(--dark);
+  --color-bg-rgb: var(--light);
+
+  --gradient-start-rgb: var(--accent);
+  --gradient-end-rgb: var(--secondary);
+}
+
+/* Dark theme override */
+html[data-theme='dark'] {
+  color-scheme: dark;
+
   --color-text-rgb: var(--light);
   --color-bg-rgb: var(--dark);
 
@@ -31,10 +43,26 @@
   --gradient-end-rgb: var(--secondary-dark);
 }
 
+/* Dark theme system preference */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    color-scheme: dark;
+
+    --color-text-rgb: var(--light);
+    --color-bg-rgb: var(--dark);
+
+    --gradient-start-rgb: var(--accent-dark);
+    --gradient-end-rgb: var(--secondary-dark);
+  }
+}
+
 body {
   font-family: system-ui, sans-serif;
   background-color: var(--color-bg);
   color: var(--color-text);
+  transition:
+    background-color var(--theme-transition),
+    color var(--theme-transition);
 }
 
 code {
