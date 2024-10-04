@@ -8,7 +8,7 @@ export default function SunIcon({ size = 16 }: Props) {
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      strokeWidth={Math.min(size / 16, 2.4)}
+      strokeWidth={1.3}
       stroke="currentColor"
       style={{ width: `${size / 16}rem` }}
     >
