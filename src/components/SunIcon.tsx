@@ -1,12 +1,16 @@
-export default function SunIcon() {
+type Props = {
+  size?: number;
+};
+
+export default function SunIcon({ size = 16 }: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"
-      strokeWidth={1.5}
+      strokeWidth={Math.min(size / 16, 2.4)}
       stroke="currentColor"
-      style={{ width: '1.2rem' }}
+      style={{ width: `${size / 16}rem` }}
     >
       <path
         strokeLinecap="round"
