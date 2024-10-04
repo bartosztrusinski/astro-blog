@@ -1,30 +1,59 @@
+.toggleWrapper {
+  --color-toggle-bg: rgba(var(--dark), 0.8);
+  --color-toggle-contrast: rgba(var(--light), 1);
+
+  --padding: calc(var(--size) * 0.06);
+
+  width: var(--size);
+  height: calc(var(--size) / 2);
+  position: relative;
+
+  &:has(:checked) {
+    --color-toggle-bg: rgba(var(--light), 0.9);
+    --color-toggle-contrast: rgba(var(--dark), 1);
+  }
+}
+
 .toggle {
   appearance: none;
-  width: 3rem;
-  height: 1.5rem;
-  background-color: #aaa;
-  border-radius: 1rem;
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-toggle-bg);
+  border-radius: var(--size);
+  padding-block: var(--padding);
+  outline: transparent solid calc(var(--size) * 0.04);
+  outline-offset: calc(var(--size) * 0.04);
   cursor: pointer;
+
+  &:focus-visible {
+    outline-color: var(--color-toggle-bg);
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    width: 38%;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background-color: var(--color-toggle-contrast);
+    transform: translateX(var(--padding));
+    transition: transform 140ms ease-out;
+  }
+
+  &:checked::after {
+    transform: translateX(calc(var(--size) / 2 + var(--padding)));
+  }
 }
 
-.toggle:checked {
-  background-color: #666;
-}
-
-.toggle::after {
-  content: '';
-  display: block;
-  width: 1.2rem;
-  margin-top: 0.15rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: #fff;
-  transform: translateX(0.15rem);
-  transition: transform 180ms ease-out;
-}
-
-.toggle:checked::after {
-  transform: translateX(1.65rem);
+.icons {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  padding-inline: calc(var(--padding));
+  color: var(--color-toggle-contrast);
+  pointer-events: none;
+  display: flex;
+  justify-content: space-between;
 }
 
 .visuallyHidden {
