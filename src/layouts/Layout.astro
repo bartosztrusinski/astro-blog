@@ -1,5 +1,6 @@
 ---
 import '@styles';
+import { ViewTransitions } from 'astro:transitions';
 
 interface Props {
   title: string;
@@ -9,7 +10,7 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="en" transition:animate="slide">
   <head>
     <meta charset="UTF-8" />
     <meta name="description" content="Astro description" />
@@ -17,10 +18,19 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
-    <script is:inline>
-      const isDarkMode = localStorage.getItem('ab-dark-mode') === 'true';
-      const theme = isDarkMode ? 'dark' : 'light';
-      document.documentElement.dataset.theme = theme;
+    <ViewTransitions />
+    <script is:inline data-astro-rerun>
+      preventThemeFlash();
+
+      document.addEventListener('astro:page-load', () => {
+        preventThemeFlash();
+      });
+
+      function preventThemeFlash() {
+        const isDarkMode = localStorage.getItem('ab-dark-mode') === 'true';
+        const theme = isDarkMode ? 'dark' : 'light';
+        document.documentElement.dataset.theme = theme;
+      }
     </script>
   </head>
   <body>
