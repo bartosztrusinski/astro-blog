@@ -17,9 +17,20 @@ const { Content } = await entry.render();
 <Layout title={`${entry.data.title} | AstroBlog`}>
   <main>
     <header>
-      <h1 class="text-gradient">{entry.data.title}</h1>
-      <time class="text-muted" datetime={entry.data.date.toISOString()}
-        >{entry.data.date.toDateString()}
+      <img
+        src={entry.data.image}
+        alt={entry.data.title}
+        transition:name="post-image"
+      />
+      <h1 class="text-gradient" transition:name="post-heading">
+        {entry.data.title}
+      </h1>
+      <time
+        class="text-muted"
+        datetime={entry.data.date.toISOString()}
+        transition:name="post-date"
+      >
+        {entry.data.date.toDateString()}
       </time>
     </header>
 
@@ -39,22 +50,29 @@ const { Content } = await entry.render();
 
 <style>
   main {
-    margin-inline: auto;
-    padding: 1rem;
     width: min(100% - 2rem, 70ch);
+    margin-inline: auto;
     font-size: 1.2rem;
     line-height: 1.6;
-    margin-bottom: 4rem;
+    margin-block: 1rem 4rem;
   }
 
   header {
     margin-bottom: 2rem;
+    padding: 0.5rem;
+  }
+
+  img {
+    max-height: min(16vh, 16vw);
+    width: 100%;
+    object-fit: cover;
+    border-radius: 0.5rem;
   }
 
   h1 {
     font-size: calc(1.5rem + 3vw);
     font-weight: 700;
-    line-height: 1;
+    line-height: 1.1;
     text-wrap: balance;
   }
 
@@ -68,7 +86,7 @@ const { Content } = await entry.render();
   a {
     position: fixed;
     top: 2rem;
-    left: max(50% - 26rem, 2rem);
+    left: max(50% - 26rem, 1rem);
     background-image: var(--gradient);
     color: rgba(var(--light), 0.9);
     text-decoration: none;

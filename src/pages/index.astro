@@ -21,24 +21,30 @@ const blogEntries = await getCollection('blog');
       {
         blogEntries.map((blogPost) => (
           <li class="post">
-            <a href={`/posts/${blogPost.slug}`}>
-              {blogPost.data.image && (
-                <img
-                  src={blogPost.data.image}
-                  alt={blogPost.data.title}
-                  loading="lazy"
-                />
-              )}
-              <div>
-                <h2 class="text-gradient">{blogPost.data.title}</h2>
-                <time
-                  class="text-muted"
-                  datetime={blogPost.data.date.toISOString()}
-                >
-                  {blogPost.data.date.toDateString()}
-                </time>
-              </div>
-            </a>
+            <article>
+              <a href={`/posts/${blogPost.slug}`}>
+                {blogPost.data.image && (
+                  <img
+                    transition:name="post-image"
+                    src={blogPost.data.image}
+                    alt={blogPost.data.title}
+                    loading="lazy"
+                  />
+                )}
+                <section>
+                  <h2 class="text-gradient" transition:name="post-heading">
+                    {blogPost.data.title}
+                  </h2>
+                  <time
+                    class="text-muted"
+                    datetime={blogPost.data.date.toISOString()}
+                    transition:name="post-date"
+                  >
+                    {blogPost.data.date.toDateString()}
+                  </time>
+                </section>
+              </a>
+            </article>
           </li>
         ))
       }
@@ -104,7 +110,7 @@ const blogEntries = await getCollection('blog');
       border-radius: 0.4rem;
     }
 
-    & div {
+    & section {
       display: flex;
       flex-direction: column;
       place-content: center;
