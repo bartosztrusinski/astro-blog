@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
-import useLocalStorage from './useLocalStorage';
-import useMediaQuery from './useMediaQuery';
+import useLocalStorage from '@hooks/useLocalStorage';
+import useMediaQuery from '@hooks/useMediaQuery';
 
 export default function useDarkMode(): [
   isDarkMode: boolean,

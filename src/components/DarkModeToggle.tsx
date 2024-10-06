@@ -1,7 +1,7 @@
-import Toggle from './Toggle';
-import MoonIcon from './MoonIcon';
-import SunIcon from './SunIcon';
-import useDarkMode from '../hooks/useDarkMode';
+import Toggle from '@components/Toggle';
+import MoonIcon from '@components/MoonIcon';
+import SunIcon from '@components/SunIcon';
+import useDarkMode from '@hooks/useDarkMode';
 
 export default function DarkModeToggle() {
   const [isDarkMode, toggleDarkMode] = useDarkMode();
