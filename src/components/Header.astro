@@ -1,5 +1,11 @@
 ---
 import DarkModeToggle from '@components/DarkModeToggle';
+
+const isDev = import.meta.env.DEV;
+
+if (isDev) {
+  import('@components/Toggle/index.module.css');
+}
 ---
 
 <header>
