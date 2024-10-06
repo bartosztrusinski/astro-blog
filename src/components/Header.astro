@@ -1,0 +1,22 @@
+---
+import DarkModeToggle from './DarkModeToggle';
+---
+
+<header>
+  <h1>
+    Astro<span class="text-gradient">Blog🚀</span>
+  </h1>
+  <DarkModeToggle client:only />
+</header>
+
+<style>
+  header {
+    position: sticky;
+    z-index: 3;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+  }
+</style>
