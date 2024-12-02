@@ -9,7 +9,7 @@ In the vast tapestry of the cosmos, black holes stand as enigmatic entities, cap
 **Black holes** are born from the remnants of massive stars that have exhausted their nuclear fuel. When such a star reaches the end of its life cycle, it undergoes a supernova explosion, and what remains can collapse under its own gravity to form a black hole. The gravitational pull becomes so intense that not even light can escape, rendering these celestial bodies invisible to the naked eye.
 
 <figure class="image">
-  <img loading="lazy" src="https://science.nasa.gov/_ipx/w_2048&f_webp/https://smd-cms.nasa.gov/wp-content/uploads/2023/09/Illustration_of_black_hole.jpeg%3Fw=1728" alt="Rapidly spinning supermassive black hole surrounded by an accretion disc" />
+  <img src="https://science.nasa.gov/_ipx/w_2048&f_webp/https://smd-cms.nasa.gov/wp-content/uploads/2023/09/Illustration_of_black_hole.jpeg%3Fw=1728" alt="Rapidly spinning supermassive black hole surrounded by an accretion disc" />
   <figcaption class="text-muted">
     Rapidly spinning supermassive black hole surrounded by an accretion disc.
   </figcaption>
@@ -27,9 +27,15 @@ Black holes, with their mysterious nature and immense gravitational influence, c
 
 <style>
   figure {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
+    text-align: center;
     padding-inline: 2rem;
   }
+
+  img {
+    object-fit: contain;
+    aspect-ratio: 1.4;
+    min-width: 100%;
+    height: auto;
+  }
+
 </style>
