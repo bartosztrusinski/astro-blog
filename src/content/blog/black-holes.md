@@ -1,7 +1,7 @@
 ---
 title: Unraveling the Mysteries of Black Holes
 date: 2023-11-26
-image: https://science.nasa.gov/_ipx/w_2048&f_webp/https://smd-cms.nasa.gov/wp-content/uploads/2023/09/blackhole_1600.jpg%3Fw=1600
+image: https://science.nasa.gov/_ipx/w_2048&f_webp/https://smd-cms.nasa.gov/wp-content/uploads/2023/09/blackhole_1600.jpg%3Fw=1024
 ---
 
 In the vast tapestry of the cosmos, black holes stand as enigmatic entities, captivating the imaginations of astronomers and space enthusiasts alike. These cosmic wonders, shrouded in mystery, defy our conventional understanding of space and time. Join us on this celestial journey as we unravel the basic knowledge about black holes, exploring the science behind these gravitational behemoths.
@@ -9,7 +9,7 @@ In the vast tapestry of the cosmos, black holes stand as enigmatic entities, cap
 **Black holes** are born from the remnants of massive stars that have exhausted their nuclear fuel. When such a star reaches the end of its life cycle, it undergoes a supernova explosion, and what remains can collapse under its own gravity to form a black hole. The gravitational pull becomes so intense that not even light can escape, rendering these celestial bodies invisible to the naked eye.
 
 <figure class="image">
-  <img src="https://science.nasa.gov/_ipx/w_2048&f_webp/https://smd-cms.nasa.gov/wp-content/uploads/2023/09/Illustration_of_black_hole.jpeg%3Fw=1728" alt="Rapidly spinning supermassive black hole surrounded by an accretion disc" />
+  <img loading="lazy" src="https://science.nasa.gov/_ipx/w_2048&f_webp/https://smd-cms.nasa.gov/wp-content/uploads/2023/09/Illustration_of_black_hole.jpeg%3Fw=800" alt="Rapidly spinning supermassive black hole surrounded by an accretion disc" />
   <figcaption class="text-muted">
     Rapidly spinning supermassive black hole surrounded by an accretion disc.
   </figcaption>

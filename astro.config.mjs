@@ -5,4 +5,7 @@ import react from '@astrojs/react';
 export default defineConfig({
   // Enable React to support React JSX components.
   integrations: [react()],
+  image: {
+    domains: ['science.nasa.gov'],
+  },
 });
