@@ -1,44 +1,44 @@
 ---
-import { getCollection } from 'astro:content';
+import { getCollection, render } from 'astro:content';
 import { Image } from 'astro:assets';
 
 import Layout from '@layouts/Layout.astro';
 
 export async function getStaticPaths() {
-  const blogEntries = await getCollection('blog');
-  return blogEntries.map((entry) => ({
-    params: { slug: entry.slug },
-    props: { entry },
+  const blogPosts = await getCollection('blog');
+
+  return blogPosts.map((post) => ({
+    params: { slug: post.id },
+    props: { post },
   }));
 }
 
-const { entry } = Astro.props;
-const { Content } = await entry.render();
+const { post } = Astro.props;
+const { Content } = await render(post);
 ---
 
-<Layout title={`${entry.data.title} | AstroBlog`}>
+<Layout title={`${post.data.title} | AstroBlog`}>
   <main>
     <header>
       {
-        entry.data.image && (
+        post.data.cover && (
           <Image
-            src={entry.data.image}
-            alt={entry.data.title}
+            src={post.data.cover}
+            alt={post.data.title}
             transition:name="post-image"
-            inferSize={true}
             loading="eager"
           />
         )
       }
       <h1 class="text-gradient" transition:name="post-heading">
-        {entry.data.title}
+        {post.data.title}
       </h1>
       <time
         class="text-muted"
-        datetime={entry.data.date.toISOString()}
+        datetime={post.data.date.toISOString()}
         transition:name="post-date"
       >
-        {entry.data.date.toDateString()}
+        {post.data.date.toDateString()}
       </time>
     </header>
 
@@ -60,28 +60,27 @@ const { Content } = await entry.render();
   main {
     width: min(100% - 2rem, 70ch);
     margin-inline: auto;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.6;
-    margin-block: 1rem 4rem;
+    margin-block: 2rem 4rem;
   }
 
   header {
     margin-bottom: 2rem;
-    padding: 0.5rem;
-  }
 
-  img {
-    max-height: min(16vh, 16vw);
-    width: 100%;
-    object-fit: cover;
-    border-radius: 0.5rem;
+    & img {
+      max-height: min(20vh, 20vw);
+      border-radius: 0.5rem;
+    }
   }
 
   h1 {
     font-size: calc(1.5rem + 3vw);
     font-weight: 700;
-    line-height: 1.1;
+    line-height: 1.2;
     text-wrap: balance;
+    margin-top: 1rem;
+    padding-bottom: 0.4rem;
   }
 
   section {
