@@ -3,9 +3,12 @@ import react from '@astrojs/react';
 
 // https://astro.build/config
 export default defineConfig({
-  // Enable React to support React JSX components.
   integrations: [react()],
   image: {
-    domains: ['science.nasa.gov'],
+    layout: 'constrained',
+    responsiveStyles: true,
+  },
+  devToolbar: {
+    enabled: true,
   },
 });
