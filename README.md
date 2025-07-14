@@ -1,13 +1,22 @@
-# Astro + React Example
+# AstroBlog 🚀
 
-```sh
-npm create astro@latest -- --template framework-react
-```
+A minimalist blog about Astronomy and Astrophysics built with Astro, React, and TypeScript. This project serves as a personal space to share thoughts and discoveries about the cosmos.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/framework-react)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/framework-react)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/framework-react/devcontainer.json)
+## Features
 
-This example showcases Astro working with [React](https://react.dev).
+- **Content-driven**: Uses Astro's Content Collections for managing blog posts written in Markdown.
+- **Dark/Light Mode**: Theme toggling with persistence in `localStorage`.
+- **View Transitions**: Smooth page transitions using Astro's View Transitions API.
+- **Image Optimization**: Leverages `astro:assets` for optimized images.
+- **Responsive Design**: Fully responsive layout for a great experience on all devices.
 
-Write your React components as `.jsx` or `.tsx` files in your project.
+## Technologies Used
+
+- [Astro](https://astro.build/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Markdown](https://www.markdownguide.org/)
+
+## Screenshots
+
+![Astro Blog Homepage](https://github.com/user-attachments/assets/7ffabe83-caa9-44e6-b941-6434920ae625)
