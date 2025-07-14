@@ -56,7 +56,6 @@ const blogPosts = await getCollection('blog');
 <style>
   main {
     margin: auto;
-    padding: 1rem;
     width: min(100% - 2rem, 80ch);
   }
 
@@ -78,7 +77,6 @@ const blogPosts = await getCollection('blog');
     background-image: var(--gradient);
     color: rgba(var(--light), 0.9);
     font-size: calc(0.9rem + 0.22vw);
-    margin-bottom: 2rem;
     padding: 1.2rem 1.6rem;
     border-radius: 0.4rem;
     text-align: justify;
@@ -89,7 +87,7 @@ const blogPosts = await getCollection('blog');
     display: flex;
     gap: 1rem;
     flex-direction: column;
-    padding: 0;
+    padding: 2rem 0;
   }
 
   .post {
@@ -115,7 +113,7 @@ const blogPosts = await getCollection('blog');
       place-content: center;
       gap: 0.5rem;
       line-height: 1.2;
-      padding-bottom: 1.2rem;
+      padding-bottom: 0.6rem;
       text-wrap: balance;
     }
 
