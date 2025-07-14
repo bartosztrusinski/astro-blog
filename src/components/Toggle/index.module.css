@@ -1,6 +1,6 @@
 .toggleWrapper {
-  --color-toggle-bg: rgba(var(--dark), 0.8);
-  --color-toggle-contrast: rgba(var(--light), 1);
+  --color-toggle-bg: rgb(var(--accent));
+  --color-toggle-contrast: rgb(var(--light));
 
   --padding: calc(var(--size) * 0.06);
 
@@ -10,8 +10,8 @@
   border-radius: var(--size);
 
   &:has(:checked) {
-    --color-toggle-bg: rgba(var(--light), 0.9);
-    --color-toggle-contrast: rgba(var(--dark), 1);
+    --color-toggle-bg: rgb(var(--accent-dark));
+    --color-toggle-contrast: rgb(var(--light));
   }
 }
 
