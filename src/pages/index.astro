@@ -22,8 +22,8 @@ const blogPosts = await getCollection('blog');
     <ul>
       {
         blogPosts.map((blogPost) => (
-          <li class="post">
-            <article>
+          <li>
+            <article class="post">
               <a href={`/posts/${blogPost.id}`}>
                 {blogPost.data.cover && (
                   <Image
@@ -35,9 +35,7 @@ const blogPosts = await getCollection('blog');
                   />
                 )}
                 <section>
-                  <h2 class="text-gradient" transition:name="post-heading">
-                    {blogPost.data.title}
-                  </h2>
+                  <h2 transition:name="post-heading">{blogPost.data.title}</h2>
                   <time
                     class="text-muted"
                     datetime={blogPost.data.date.toISOString()}
@@ -60,21 +58,20 @@ const blogPosts = await getCollection('blog');
     margin: auto;
     padding: 1rem;
     width: min(100% - 2rem, 80ch);
-    font-size: 20px;
-    line-height: 1.6;
   }
 
   h1 {
-    font-size: calc(1.8rem + 2.6vw);
+    font-size: calc(1.8rem + 2vw);
     font-weight: bold;
-    line-height: 1;
+    line-height: 1.1;
     text-align: center;
     margin-block: 1rem 0.8em;
     text-wrap: balance;
   }
 
   h2 {
-    font-size: calc(1.2rem + 0.6vw);
+    font-size: calc(1rem + 0.6vw);
+    color: inherit;
   }
 
   p {
@@ -97,13 +94,14 @@ const blogPosts = await getCollection('blog');
 
   .post {
     border-radius: 0.3rem;
-    transition: all 120ms ease-in-out;
+    transition: all 180ms ease-in-out;
 
     & a {
       display: flex;
       text-decoration: none;
       padding: 0.6rem;
       gap: 1rem;
+      color: rgb(var(--color-text-rgb));
     }
 
     & img {
@@ -122,8 +120,8 @@ const blogPosts = await getCollection('blog');
     }
 
     &:hover {
-      background-color: rgba(var(--accent), 0.06);
-      box-shadow: 0 0 3px 1px rgba(var(--accent), 0.2);
+      background-color: rgba(var(--accent), 0.08);
+      box-shadow: 0 0 3px 1px rgba(var(--accent), 0.3);
     }
 
     @media (max-width: 570px) {

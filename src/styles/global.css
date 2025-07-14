@@ -1,6 +1,6 @@
 :root {
-  --light: 247, 242, 242;
-  --dark: 19, 19, 25;
+  --light: 233, 239, 255;
+  --dark: 11, 17, 33;
 
   --accent: 136, 58, 234;
   --accent-dark: 59, 20, 111;
@@ -66,6 +66,7 @@ body {
 }
 
 code {
-  font-family: Menlo, Monaco, 'Lucida Console', 'Liberation Mono',
-    'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace;
+  font-family:
+    Menlo, Monaco, 'Lucida Console', 'Liberation Mono', 'DejaVu Sans Mono',
+    'Bitstream Vera Sans Mono', 'Courier New', monospace;
 }
