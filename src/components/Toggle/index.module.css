@@ -7,6 +7,7 @@
   width: var(--size);
   height: calc(var(--size) / 2);
   position: relative;
+  border-radius: var(--size);
 
   &:has(:checked) {
     --color-toggle-bg: rgba(var(--light), 0.9);
@@ -18,6 +19,8 @@
   appearance: none;
   position: absolute;
   inset: 0;
+  width: 100%;
+  height: 100%;
   background-color: var(--color-toggle-bg);
   border-radius: var(--size);
   padding-block: var(--padding);

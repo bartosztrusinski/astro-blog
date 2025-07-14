@@ -30,7 +30,7 @@ const { Content } = await render(post);
           />
         )
       }
-      <h1 class="text-gradient" transition:name="post-heading">
+      <h1 transition:name="post-heading">
         {post.data.title}
       </h1>
       <time
@@ -59,10 +59,9 @@ const { Content } = await render(post);
 <style>
   main {
     width: min(100% - 2rem, 70ch);
-    margin-inline: auto;
+    margin: 2rem auto 4rem;
     font-size: 1.1rem;
     line-height: 1.6;
-    margin-block: 2rem 4rem;
   }
 
   header {
